@@ -5,55 +5,45 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Concurso Público - Login</title>
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <main className="form-signin w-100 m-auto">
+        <form>
+          <img
+            className="mb-4"
+            src="../images/in_logo.svg"
+            alt=""
+            width="72"
+            height="57"
+          />
+          <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+          <div className="form-floating mb-1">
+            <input
+              type="email"
+              className="form-control"
+              id="floatingInput"
+              placeholder="name@example.com"
+            />
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div className="form-floating mb-1">
+            <input
+              type="password"
+              className="form-control"
+              id="floatingPassword"
+              placeholder="Password"
+            />
+            <label for="floatingPassword">Password</label>
+          </div>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+          <button className="w-100 btn btn-lg btn-danger" type="submit">
+            Sign in
+          </button>
+          <p className="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
+        </form>
       </main>
-
-      <footer className={styles.footer}>
-        <a href="https://next.new" target="_blank" rel="noopener noreferrer">
-          Created with&nbsp;<b>next.new</b>&nbsp;⚡️
-        </a>
-      </footer>
     </div>
   );
 }
